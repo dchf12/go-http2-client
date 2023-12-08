@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"math/big"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -56,7 +56,7 @@ func handlerPrimeSSE(w http.ResponseWriter, r *http.Request) {
 }
 func main() {
 	var err error
-	html, err = ioutil.ReadFile("index.html")
+	html, err = os.ReadFile("index.html")
 	if err != nil {
 		panic(err)
 	}

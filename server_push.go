@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 
 var image []byte
 
 func init() {
 	var err error
-	image, err = ioutil.ReadFile("./image.png")
+	image, err = os.ReadFile("./image.png")
 	if err != nil {
 		panic(err)
 	}
